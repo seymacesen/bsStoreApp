@@ -2,8 +2,10 @@
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq.Expressions;
-using WebApi.Models;
-using WebApi.Repositories;
+using Entities.Models;
+
+
+using Repositories.EFCore;
 
 namespace WebApi.Controllers
 {
