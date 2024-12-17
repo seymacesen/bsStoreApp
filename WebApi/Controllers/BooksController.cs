@@ -3,8 +3,6 @@ using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq.Expressions;
 using Entities.Models;
-
-
 using Repositories.EFCore;
 
 namespace WebApi.Controllers
