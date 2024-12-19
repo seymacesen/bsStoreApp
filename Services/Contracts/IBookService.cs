@@ -4,7 +4,7 @@ namespace Services.Contracts
 {
     public interface IBookService
     {
-        IEnumerable<Book> GetAllBooks(bool trackChanges);
+        IEnumerable<Book> GetAllBooks(bool trackChanges);//IEnumerable, tamamlanmış bir koleksiyon döner.
         Book GetOneBookById(int id, bool trackChanges);
         Book CreateOneBook(Book book);
         void UpdateOneBook(int id, Book book, bool trackChanges);
