@@ -11,17 +11,18 @@ namespace Services
 {
     public class BookManager : IBookService//aynı imzaları repoda tanımladık neden burada da tanımlıyoz?? repo değişebilir diye aynı tsanımlamakta fayda var?
     {
-        private readonly IRepositoryManager _manager;
+        private readonly IRepositoryManager _manager; //
+        private readonly ILoggerService _logger;
+        public BookManager(IRepositoryManager manager, ILoggerService logger)//Crud için repository katmanına eişimi sağlıyo
 
-        public BookManager(IRepositoryManager manager)
         {
             _manager = manager;
+            _logger = logger;
         }
 
         public Book CreateOneBook(Book book)
         {
-            if(book is null)
-                throw new ArgumentNullException(nameof(book));
+
 
             _manager.Book.CreateOneBook(book);
             _manager.Save();
@@ -33,16 +34,21 @@ namespace Services
             //check entity
             var entity = _manager.Book.GetOneBookById(id, trackChanges);
             if (entity is null)
-                throw new Exception($"Book with id:{id} could not found. ");
+            {
+
+                string message = $"The book with id:{id} could not found.";
+                _logger.LogInfo(message);
+                throw new Exception(message);
+            }
 
             _manager.Book.DeleteOneBook(entity); ;
             _manager.Save();
-                
+
         }
 
         public IEnumerable<Book> GetAllBooks(bool trackChanges)
         {
-            return _manager.Book.GetAllBooks(trackChanges); 
+            return _manager.Book.GetAllBooks(trackChanges);
         }
 
         public Book GetOneBookById(int id, bool trackChanges)
@@ -55,17 +61,22 @@ namespace Services
             //check entity
             var entity = _manager.Book.GetOneBookById(id, trackChanges);
             if (entity is null)
-                throw new Exception($"Book with id:{id} could not found. ");
+            {
+                string msg = $"The book with id:{id} could not found.";
+                _logger.LogInfo(msg);
+                throw new Exception(msg);
 
-            //check params
-            if(book is null)
-                throw new ArgumentException(nameof(book));
 
-            entity.Title = book.Title;
-            entity.Price = book.Price;
+                //check params
+                if (book is null)
+                    throw new ArgumentException(nameof(book));
 
-            _manager.Book.Update(entity);
-            _manager.Save();
+                entity.Title = book.Title;
+                entity.Price = book.Price;
+
+                _manager.Book.Update(entity);
+                _manager.Save();
+            }
         }
     }
 }

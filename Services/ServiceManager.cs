@@ -15,13 +15,14 @@ namespace Services
         /*ServiceManager, servisler için gerekli olan repository'lere erişmek zorundadır.
         Repository'ler bir RepositoryManager nesnesi üzerinden yönetildiği için bu nesne,
         constructor aracılığıyla ServiceManager'a geçirilir.*/
-        public ServiceManager(IRepositoryManager repositoryManager)
+        public ServiceManager(IRepositoryManager repositoryManager, ILoggerService logger)
         {
 
-            _bookService = new Lazy<IBookService>(() => new BookManager(repositoryManager));
+            _bookService = new Lazy<IBookService>(() => new BookManager(repositoryManager, logger));
             //BookManager sınıfı, IBookService arayüzünün bir implementasyonudur ve oluşturulurken bir repositoryManager nesnesine ihtiyaç duyar.
         }
         public IBookService BookService => _bookService.Value;
 
     }
 }
+// Dependemcy inversion = Üst sınıflar alt sınıflara bağımlı olmamalıdır. bağlantı gerekliyse de interfaceler ile sağlanmalıdır.Repo  ve servisi interface manager nesnesi uzeri den oluştururyoruz. Servise loger eklersem ServiceManager üzerinde de bazı değişiklikler yapmamazı gerekiyor. Configurationlar devam eder.
