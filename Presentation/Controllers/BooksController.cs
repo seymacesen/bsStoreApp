@@ -15,10 +15,12 @@ namespace Presentation.Controllers
     public class BooksController : ControllerBase
     {
         private readonly IServiceManager _manager;
+       
 
-        public BooksController(IServiceManager manager)
+        public BooksController(IServiceManager manager )
         {
             _manager = manager;
+      
         }
 
         [HttpGet]

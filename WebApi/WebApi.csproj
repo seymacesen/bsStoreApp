@@ -27,4 +27,8 @@
     <ProjectReference Include="D:\ASPDotnetCoreWebApi\Applications\Repositories\Repositories.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="internal_logs\" />
+  </ItemGroup>
+
 </Project>
