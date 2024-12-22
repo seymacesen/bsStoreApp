@@ -1,4 +1,5 @@
-﻿using Entities.Models;
+﻿using Entities.Exceptions;
+using Entities.Models;
 using Repositories.Contracts;
 using Services.Contracts;
 using System;
@@ -9,12 +10,13 @@ using System.Threading.Tasks;
 
 namespace Services
 {
-    public class BookManager : IBookService//aynı imzaları repoda tanımladık neden burada da tanımlıyoz?? repo değişebilir diye aynı tsanımlamakta fayda var?
+    public class BookManager : IBookService
     {
-        private readonly IRepositoryManager _manager; //
+        private readonly IRepositoryManager _manager;
         private readonly ILoggerService _logger;
-        public BookManager(IRepositoryManager manager, ILoggerService logger)//Crud için repository katmanına eişimi sağlıyo
 
+        public BookManager(IRepositoryManager manager,
+            ILoggerService logger)
         {
             _manager = manager;
             _logger = logger;
@@ -22,8 +24,6 @@ namespace Services
 
         public Book CreateOneBook(Book book)
         {
-
-
             _manager.Book.CreateOneBook(book);
             _manager.Save();
             return book;
@@ -31,19 +31,13 @@ namespace Services
 
         public void DeleteOneBook(int id, bool trackChanges)
         {
-            //check entity
+            // check entity 
             var entity = _manager.Book.GetOneBookById(id, trackChanges);
             if (entity is null)
-            {
+                throw new BookNotFoundException(id);
 
-                string message = $"The book with id:{id} could not found.";
-                _logger.LogInfo(message);
-                throw new Exception(message);
-            }
-
-            _manager.Book.DeleteOneBook(entity); ;
+            _manager.Book.DeleteOneBook(entity);
             _manager.Save();
-
         }
 
         public IEnumerable<Book> GetAllBooks(bool trackChanges)
@@ -53,30 +47,24 @@ namespace Services
 
         public Book GetOneBookById(int id, bool trackChanges)
         {
-            return _manager.Book.GetOneBookById(id, trackChanges);
+            var book = _manager.Book.GetOneBookById(id, trackChanges);
+            if (book is null)
+                throw new BookNotFoundException(id);
+            return book;
         }
 
         public void UpdateOneBook(int id, Book book, bool trackChanges)
         {
-            //check entity
+            // check entity
             var entity = _manager.Book.GetOneBookById(id, trackChanges);
             if (entity is null)
-            {
-                string msg = $"The book with id:{id} could not found.";
-                _logger.LogInfo(msg);
-                throw new Exception(msg);
+                throw new BookNotFoundException(id);
 
+            entity.Title = book.Title;
+            entity.Price = book.Price;
 
-                //check params
-                if (book is null)
-                    throw new ArgumentException(nameof(book));
-
-                entity.Title = book.Title;
-                entity.Price = book.Price;
-
-                _manager.Book.Update(entity);
-                _manager.Save();
-            }
+            _manager.Book.Update(entity);
+            _manager.Save();
         }
     }
 }
