@@ -22,14 +22,14 @@ builder.Services.ConfigureLoggerService();
 
 
 var app = builder.Build();
+
 var logger = app.Services.GetRequiredService<ILoggerService>();
-app.ConfigureExceptionHandler(logger);
+app.ConfigureExceptionHandler(logger); //
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseHsts();
 }
 //globalexceptionhandler
 if (app.Environment.IsProduction())
