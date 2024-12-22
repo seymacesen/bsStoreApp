@@ -4,3 +4,51 @@
 2024-12-22 14:10:59.1039 Info Configuration initialized.
 2024-12-22 14:11:05.5990 Info AppDomain Shutting down. LogFactory closing...
 2024-12-22 14:11:05.6208 Info LogFactory has been closed.
+2024-12-22 16:57:08.4387 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-12-22 16:57:08.5060 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-12-22 16:57:08.5429 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\cesen\source\repos\bsStoreApp\WebApi\nlog.config
+2024-12-22 16:57:08.5776 Info Configuration initialized.
+2024-12-22 17:22:24.3262 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-12-22 17:22:24.3595 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-12-22 17:22:24.3704 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\cesen\source\repos\bsStoreApp\WebApi\nlog.config
+2024-12-22 17:22:24.3704 Info Configuration initialized.
+2024-12-22 17:37:58.1102 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-12-22 17:37:58.1309 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-12-22 17:37:58.1309 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\cesen\source\repos\bsStoreApp\WebApi\nlog.config
+2024-12-22 17:37:58.1574 Info Configuration initialized.
+2024-12-22 18:16:39.0343 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-12-22 18:16:39.0726 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-12-22 18:16:39.1070 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\cesen\source\repos\bsStoreApp\WebApi\nlog.config
+2024-12-22 18:16:39.2901 Info Configuration initialized.
+2024-12-22 18:23:12.0189 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-12-22 18:23:12.0467 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-12-22 18:23:12.0669 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\cesen\source\repos\bsStoreApp\WebApi\nlog.config
+2024-12-22 18:23:12.0881 Info Configuration initialized.
+2024-12-22 18:28:06.7479 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-12-22 18:28:06.7640 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-12-22 18:28:06.7783 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\cesen\source\repos\bsStoreApp\WebApi\nlog.config
+2024-12-22 18:28:06.7934 Info Configuration initialized.
+2024-12-22 19:36:24.1293 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-12-22 19:36:24.1485 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-12-22 19:36:24.1485 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\cesen\source\repos\bsStoreApp\WebApi\nlog.config
+2024-12-22 19:36:24.1785 Info Configuration initialized.
+2024-12-22 19:40:21.3418 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-12-22 19:40:21.3620 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-12-22 19:40:21.3753 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\cesen\source\repos\bsStoreApp\WebApi\nlog.config
+2024-12-22 19:40:21.3874 Info Configuration initialized.
+2024-12-22 19:44:03.7206 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-12-22 19:44:03.7417 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-12-22 19:44:03.7417 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\cesen\source\repos\bsStoreApp\WebApi\nlog.config
+2024-12-22 19:44:03.7711 Info Configuration initialized.
+2024-12-22 19:46:40.1484 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-12-22 19:46:40.1667 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-12-22 19:46:40.1787 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\cesen\source\repos\bsStoreApp\WebApi\nlog.config
+2024-12-22 19:46:40.1928 Info Configuration initialized.
+2024-12-22 19:56:12.6806 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-12-22 19:56:12.6963 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-12-22 19:56:12.6963 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\cesen\source\repos\bsStoreApp\WebApi\nlog.config
+2024-12-22 19:56:12.7169 Info Configuration initialized.
+2024-12-22 20:13:04.7942 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-12-22 20:13:04.8136 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-12-22 20:13:04.8307 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\cesen\source\repos\bsStoreApp\WebApi\nlog.config
+2024-12-22 20:13:04.8484 Info Configuration initialized.

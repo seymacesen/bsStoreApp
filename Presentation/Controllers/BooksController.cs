@@ -79,7 +79,9 @@ namespace Presentation.Controllers
                 .GetOneBookById(id, true);
 
             bookPatch.ApplyTo(entity);
-            _manager.BookService.UpdateOneBook(id, new BookDtoForUpdate(entity.Id, entity.Title, entity.Price), true);
+            _manager.BookService.UpdateOneBook(id,
+                new BookDtoForUpdate(entity.Id, entity.Title, entity.Price),
+                true);
 
             return NoContent(); // 204
         }
