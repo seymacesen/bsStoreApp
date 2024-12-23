@@ -1,4 +1,4 @@
-using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NLog;
 using Repositories.EFCore;
@@ -11,15 +11,20 @@ LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nl
 
 builder.Services.AddControllers(config =>
 {
-    config.RespectBrowserAcceptHeader = true; //default false oldugu için içerik pazarlýgýna kapalýydý. Onu düzlettik
-    config.ReturnHttpNotAcceptable=true;
+    config.RespectBrowserAcceptHeader = true;
+    config.ReturnHttpNotAcceptable = true;
 })
-    .AddCustomCsvFormatter()
-    .AddXmlDataContractSerializerFormatters()
-    .AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly)
-    .AddNewtonsoftJson();
+.AddCustomCsvFormatter()
+.AddXmlDataContractSerializerFormatters()
+.AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly)
+.AddNewtonsoftJson();
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.Configure<ApiBehaviorOptions>(options =>
+{
+    options.SuppressModelStateInvalidFilter = true;
+});
+
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -33,15 +38,14 @@ builder.Services.AddAutoMapper(typeof(Program));
 var app = builder.Build();
 
 var logger = app.Services.GetRequiredService<ILoggerService>();
-app.ConfigureExceptionHandler(logger); //
+app.ConfigureExceptionHandler(logger);
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-//globalexceptionhandler
+
 if (app.Environment.IsProduction())
 {
     app.UseHsts();

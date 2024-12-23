@@ -52,3 +52,17 @@
 2024-12-22 20:13:04.8136 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
 2024-12-22 20:13:04.8307 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\cesen\source\repos\bsStoreApp\WebApi\nlog.config
 2024-12-22 20:13:04.8484 Info Configuration initialized.
+2024-12-23 09:55:56.5091 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-12-23 09:55:56.5307 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-12-23 09:55:56.5406 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\cesen\source\repos\bsStoreApp\WebApi\nlog.config
+2024-12-23 09:55:56.5406 Info Configuration initialized.
+2024-12-23 09:56:11.5267 Info AppDomain Shutting down. LogFactory closing...
+2024-12-23 09:56:11.5267 Info LogFactory has been closed.
+2024-12-23 10:00:56.0107 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-12-23 10:00:56.0288 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-12-23 10:00:56.0411 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\cesen\source\repos\bsStoreApp\WebApi\nlog.config
+2024-12-23 10:00:56.0550 Info Configuration initialized.
+2024-12-23 11:30:03.6440 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-12-23 11:30:03.6775 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-12-23 11:30:03.7756 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\cesen\source\repos\bsStoreApp\WebApi\nlog.config
+2024-12-23 11:30:03.7994 Info Configuration initialized.
