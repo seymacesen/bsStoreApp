@@ -60,10 +60,10 @@ namespace Services
             return _mapper.Map<BookDto>(book);
         }
 
-        public async Task< (BookDtoForUpdate bookDtoForUpdate, Book book)> 
+        public async Task<(BookDtoForUpdate bookDtoForUpdate, Book book)>
             GetOneBookForPatchAsync(int id, bool trackChanges)
         {
-            var book =await _manager.Book.GetOneBookByIdAsync(id, trackChanges);
+            var book = await _manager.Book.GetOneBookByIdAsync(id, trackChanges);
 
             if (book is null)
                 throw new BookNotFoundException(id);

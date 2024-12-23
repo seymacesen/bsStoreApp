@@ -25,7 +25,7 @@ namespace Presentation.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllBooksAsync()
         {
-            var books =await _manager
+            var books = await _manager
                 .BookService.
                 GetAllBooksAsync(false);
 
@@ -52,7 +52,7 @@ namespace Presentation.Controllers
                 return UnprocessableEntity(ModelState);
 
 
-            var book =await _manager.BookService.CreateOneBookAsync(bookDto);
+            var book = await _manager.BookService.CreateOneBookAsync(bookDto);
 
             return StatusCode(201, book); // CreatedAtRoute()
         }
