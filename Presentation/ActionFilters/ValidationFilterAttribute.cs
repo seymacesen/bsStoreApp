@@ -12,6 +12,7 @@ namespace Presentation.ActionFilters
     {
         public override void OnActionExecuting(ActionExecutingContext context)
         {
+            
             var controller = context.RouteData.Values["controller"];
             var action = context.RouteData.Values["action"];
 
